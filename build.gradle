@@ -1,0 +1,26 @@
+plugins {
+    id "com.gradle.plugin-publish" version "0.9.1"
+}
+plugins {
+    id 'net.researchgate.release' version '2.3.4'
+}
+
+group 'com.orctom.gradle'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
