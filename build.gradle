@@ -24,3 +24,18 @@ dependencies {
     compile gradleApi()
     compile localGroovy()
 }
+
+pluginBundle {
+    website = 'https://github.com/orctom/gradle-applyscript-plugin'
+    vcsUrl = 'https://github.com/orctom/gradle-applyscript-plugin'
+
+    description = 'Gradle plugin that applies Gradle build scripts in jars. So that you can package multi Gradle build scripts into a jar, and distribute it to any repo as a standard artifact.'
+    tags = ['apply script', 'build script']
+
+    plugins {
+        plugin {
+            id = 'com.orctom.applyscript'
+            displayName = 'Apply Build Script Plugin'
+        }
+    }
+}
