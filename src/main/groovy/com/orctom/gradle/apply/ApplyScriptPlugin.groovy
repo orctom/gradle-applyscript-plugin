@@ -20,7 +20,7 @@ class ApplyScriptPlugin implements Plugin<Project> {
         Configuration scriptsDependencies = project.configurations.create(CONFIGURATION_SCRIPTS)
         scriptsDependencies.transitive = false
 
-        project.extensions.applyScript = { String scriptId ->
+        project.extensions.applyscript = { String scriptId ->
             if (scriptId.contains(':')) {
                 def scriptIds = scriptId.split('/')
                 def dependency = scriptIds[0]

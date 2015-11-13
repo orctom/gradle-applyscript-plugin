@@ -10,17 +10,17 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.orctom.gradle:gradle-apply-script-plugin:1.0'
+        classpath 'com.orctom.gradle:gradle-applyscript-plugin:1.0'
     }
 }
 
-apply plugin: 'com.orctom.apply'
+apply plugin: 'com.orctom.applyscript'
 ```
 
 Gradle 2.1 or newer:
 ```
 plugins {
-	id "com.orctom.apply" version "1.0"
+	id "com.orctom.applyscript" version "1.0"
 }
 ```
 
@@ -31,10 +31,10 @@ dependencies {
 	scripts '{{scriptjar.group}}:{{scriptjar.name}}:{{scriptjar.version}}'
 }
 
-applyScript '{{scriptjar.name}}-{{scriptjar.version}}/{{gradle-script-filename}}.gradle'
+applyscript '{{scriptjar.name}}-{{scriptjar.version}}/{{gradle-script-filename}}.gradle'
 ```
 
 Option 2:
 ```
-applyScript '{{scriptjar.group}}:{{scriptjar.name}}:{{scriptjar.version}}/{{gradle-script-filename}}.gradle'
+applyscript '{{scriptjar.group}}:{{scriptjar.name}}:{{scriptjar.version}}/{{gradle-script-filename}}.gradle'
 ```
