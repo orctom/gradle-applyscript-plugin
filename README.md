@@ -28,13 +28,21 @@ plugins {
 Option 1:
 ```
 dependencies {
-	scripts '{{scriptjar.group}}:{{scriptjar.name}}:{{scriptjar.version}}'
+	scripts '{{groupA}}:{{nameA}}:{{versionA}}'
+	scripts '{{groupA}}:{{nameA}}:{{versionB}}'
+	scripts '{{groupC}}:{{nameD}}:{{versionE}}'
 }
 
-applyscript '{{scriptjar.name}}-{{scriptjar.version}}/{{gradle-script-filename}}.gradle'
+applyscript '{{nameA}}-{{versionA}}/{{path-of-fileA}}.gradle'
+applyscript '{{nameA}}-{{versionA}}/{{path-of-fileB}}.gradle'
+applyscript '{{nameA}}-{{versionB}}/{{path-of-fileC}}.gradle'
+applyscript '{{nameD}}-{{versionE}}/{{path-of-fileX}}.gradle'
 ```
 
 Option 2:
 ```
-applyscript '{{scriptjar.group}}:{{scriptjar.name}}:{{scriptjar.version}}/{{gradle-script-filename}}.gradle'
+applyscript '{{groupA}}:{{nameA}}:{{versionA}}/{{path-of-fileA}}.gradle'
+applyscript '{{groupA}}:{{nameA}}:{{versionA}}/{{path-of-fileB}}.gradle'
+applyscript '{{groupA}}:{{nameA}}:{{versionB}}/{{path-of-fileC}}.gradle'
+applyscript '{{groupC}}:{{nameD}}:{{versionE}}/{{path-of-fileX}}.gradle'
 ```
