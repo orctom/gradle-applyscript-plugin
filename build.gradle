@@ -8,6 +8,7 @@ plugins {
 group 'com.orctom.gradle'
 
 apply plugin: 'groovy'
+apply plugin: 'java-gradle-plugin'
 apply plugin: 'maven'
 apply plugin: 'idea'
 
