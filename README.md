@@ -4,21 +4,23 @@ So that you can package multi Gradle build scripts into a jar, and distribute it
 
 ## Install
 All Gradle versions:
-```
+```groovy
 buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.orctom.gradle:gradle-applyscript-plugin:1.0'
-    }
+	repositories {
+		maven {
+			url "https://plugins.gradle.org/m2/"
+		}
+	}
+	dependencies {
+		classpath "com.orctom.gradle:gradle-applyscript-plugin:1.0"
+	}
 }
 
-apply plugin: 'com.orctom.applyscript'
+apply plugin: "com.orctom.applyscript"
 ```
 
 Gradle 2.1 or newer:
-```
+```groovy
 plugins {
 	id "com.orctom.applyscript" version "1.0"
 }
@@ -26,7 +28,7 @@ plugins {
 
 # Usage
 Option 1:
-```
+```groovy
 dependencies {
 	scripts '{{groupA}}:{{nameA}}:{{versionA}}'
 	scripts '{{groupA}}:{{nameA}}:{{versionB}}'
@@ -40,7 +42,7 @@ applyscript '{{nameD}}-{{versionE}}/{{path-of-fileX}}.gradle'
 ```
 
 Option 2:
-```
+```groovy
 applyscript '{{groupA}}:{{nameA}}:{{versionA}}/{{path-of-fileA}}.gradle'
 applyscript '{{groupA}}:{{nameA}}:{{versionA}}/{{path-of-fileB}}.gradle'
 applyscript '{{groupA}}:{{nameA}}:{{versionB}}/{{path-of-fileC}}.gradle'
