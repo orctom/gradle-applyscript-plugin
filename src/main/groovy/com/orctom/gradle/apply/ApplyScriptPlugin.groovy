@@ -46,7 +46,7 @@ class ApplyScriptPlugin implements Plugin<Project> {
             }
 
             scriptSet.each {
-                project.apply { from: it }
+                project.apply ( from: it )
             }
         }
     }
