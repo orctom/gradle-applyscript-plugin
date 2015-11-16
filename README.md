@@ -48,3 +48,8 @@ applyscript '{{groupA}}:{{nameA}}:{{versionA}}/{{path-of-fileB}}.gradle'
 applyscript '{{groupA}}:{{nameA}}:{{versionB}}/{{path-of-fileC}}.gradle'
 applyscript '{{groupC}}:{{nameD}}:{{versionE}}/{{path-of-fileX}}.gradle'
 ```
+
+# Changes
+
+### 1.1
+* Fixed the issue that the plugin was not working at all, due to a typo.
