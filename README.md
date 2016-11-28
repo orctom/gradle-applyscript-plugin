@@ -12,7 +12,7 @@ buildscript {
 		}
 	}
 	dependencies {
-		classpath "gradle.plugin.com.orctom.gradle:gradle-applyscript-plugin:1.1"
+		classpath "com.orctom.gradle:gradle-applyscript-plugin:1.2-SNAPSHOT"
 	}
 }
 
@@ -22,7 +22,7 @@ apply plugin: "com.orctom.applyscript"
 Gradle 2.1 or newer:
 ```groovy
 plugins {
-	id "com.orctom.applyscript" version "1.1"
+	id "com.orctom.applyscript" version "1.2-SNAPSHOT"
 }
 ```
 
